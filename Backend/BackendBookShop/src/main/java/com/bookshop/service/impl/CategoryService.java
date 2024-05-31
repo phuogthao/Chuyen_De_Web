@@ -26,38 +26,75 @@ public class CategoryService implements ICategoryService {
 
     @Override
     public CategoryDTO saveCategoryBook(CategoryDTO categoryBookModel) {
-        return null;
-
+        CategoryBook categoryBookEntity = categoryRepository.save(CategoryBookConverter.toEntity(categoryBookModel));
+        return CategoryBookConverter.toModel(categoryBookEntity);
     }
 
     @Override
     public CategoryDTO updateCategory(CategoryDTO categoryBookModel) {
-        return null;
-
+        Optional<CategoryBook> categoryBookEntity = categoryRepository.findById(categoryBookModel.getId());
+        categoryBookEntity.get().setCode(categoryBookModel.getCode());
+        categoryBookEntity.get().setName(categoryBookModel.getName());
+        categoryRepository.save(categoryBookEntity.get());
+        return CategoryBookConverter.toModel(categoryBookEntity.get());
     }
 
     @Override
     public List<CategoryDTO> getAllCategory() {
-        return null;
-
+        List<CategoryDTO> result = new ArrayList<>();
+        List<CategoryBook> listEntity = categoryRepository.findAll();
+        for (CategoryBook item: listEntity) {
+            result.add(CategoryBookConverter.toModel(item));
+        }
+        return result;
     }
 
     @Override
     public void deleteCategories(long[] ids) {
-        return null;
-
+        for(long id : ids){
+            categoryRepository.deleteById(id);
+        }
     }
 
     @Override
     public List<BookDTO> getListBookByCategory(long id) {
-        return null;
-
+        List<BookDTO> result = new ArrayList<>();
+        Optional<CategoryBook> categoryBookEntity = categoryRepository.findById(id);
+        List<Book> books = categoryBookEntity.get().getBooks();
+        for(Book item : books){
+            result.add(BookConverter.toModel(item));
+        }
+        return result;
     }
 
     @Override
     public PagingDTO<BookDTO> getBookByCategory(long id, String search, int page, int pageSize, String sortType, String sortBy, String mostRecent) {
-        return null;
+        Sort sort;
+        if (sortType != null && sortType.equals("desc")) {
+            sort =  Sort.by(Sort.Order.desc(sortBy));
+        } else {
+            sort =  Sort.by(Sort.Order.asc(sortBy));
+        }
+        Pageable pageable = PageRequest.of(page, pageSize, sort);
 
+        Optional<CategoryBook> categoryBookEntity = categoryRepository.findById(id);
+        List<Book> listProducts = categoryBookEntity.get().getBooks();
+        if (search != null) {
+            listProducts = listProducts.stream().filter(product ->
+                            product.getName().toLowerCase().contains(search.toLowerCase()) ||
+                                    product.getAuthor().toLowerCase().contains(search.toLowerCase()))
+                    .toList();
+        }
+        if (mostRecent.equals("asc")) {
+            listProducts.sort((o1, o2) -> o2.getCreateDate().compareTo(o1.getCreateDate()));
+        }
+        final int start = (int)pageable.getOffset();
+        final int end = Math.min((start + pageable.getPageSize()), listProducts.size());
+        final Page<Book> pageList = new PageImpl<>(listProducts.subList(start, end), pageable, listProducts.size());
+        var result = BookConverter.toListBook(pageList.getContent());
+        int totalPage = (int) Math.ceil((double) listProducts.size() / pageSize);
+        int totalItem = listProducts.size();
+        return new PagingDTO<>(result, pageSize, totalItem, page, totalPage);
     }
 
 }

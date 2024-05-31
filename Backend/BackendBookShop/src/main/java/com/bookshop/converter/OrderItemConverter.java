@@ -6,11 +6,18 @@ import com.bookshop.model.OrderItem;
 
 public class OrderItemConverter {
     public static OrderItem toEntity(CartItem cartItem){
-        return null;
-
+        OrderItem orderItem = new OrderItem();
+        orderItem.setPriceItem(cartItem.getPriceItem());
+        orderItem.setQuantity(cartItem.getQuantity());
+        orderItem.setBook(cartItem.getBook());
+        return orderItem;
     }
     public static OrderItemDTO toModel( OrderItem orderItem){
-        return null;
-
+        OrderItemDTO orderItemDTO = new OrderItemDTO();
+        orderItemDTO.setId(orderItem.getId());
+        orderItemDTO.setPrice(orderItem.getPriceItem());
+        orderItemDTO.setQuantity(orderItem.getQuantity());
+        orderItemDTO.setNameBook(orderItem.getBook().getName());
+        return orderItemDTO;
     }
 }

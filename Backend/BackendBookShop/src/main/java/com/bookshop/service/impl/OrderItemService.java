@@ -20,7 +20,13 @@ public class OrderItemService implements IOrderItemService {
     private final OrderItemRepository orderItemRepository;
     @Override
     public List<OrderItemDTO> getOrderItemsById(long id) {
-        return null;
+        Order order = orderRepository.findById(id).get();
+        List<OrderItem> orderItems = orderItemRepository.findOrderItemsByOrder(order);
+        List<OrderItemDTO> result = new ArrayList<>();
+        for(OrderItem orderItem : orderItems){
+            result.add(OrderItemConverter.toModel(orderItem));
+        }
 
+        return result;
     }
 }

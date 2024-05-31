@@ -24,19 +24,21 @@ public class CommentService implements ICommentService {
     private final UserRepository userRepository;
     @Override
     public void createComment(User user, CommentDTO commentDTO) {
-        return null;
 
     }
 
     @Override
     public List<CommentDTO> getAllCommentByBook(long bookID) {
-        return null;
-
+        List<CommentDTO> result = new ArrayList<>();
+        return result;
     }
 
     @Override
     public List<CommentDTO> getAllCommentByUser(User user) {
-        return null;
-
+        List<CommentDTO> result = new ArrayList<>();
+        for(Comment cmt : comments){
+            result.add(CommentConverter.toModel(cmt));
+        }
+        return result;
     }
 }
