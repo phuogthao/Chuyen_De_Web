@@ -1,0 +1,59 @@
+
+
+/* Thay đổi màu nền cho modal */
+.modal-content {
+    background-color: #ffffff;
+  }
+  
+  /* Thay đổi màu chữ cho tiêu đề modal */
+  .modal-title {
+    color: #000000;
+  }
+  
+  /* Thay đổi màu chữ cho các nhãn input */
+  .form-label {
+    color: #555;
+  }
+  
+  /* Thay đổi màu nền và viền cho input */
+  .form-control {
+    background-color: #ffffff;
+    border-color: #ccc;
+  }
+  
+  /* Thay đổi màu chữ cho các nút */
+  .btn-outline-primary {
+    color: #007bff;
+  }
+  
+  /* Thay đổi màu chữ cho các biểu tượng */
+
+  
+  /* Thay đổi kích thước cho các nút */
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+
+  
+  /* Thay đổi khoảng cách giữa các phần tử */
+  .mb-3 {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Thay đổi khoảng cách trên và dưới của nút đăng ký */
+  .mt-5 {
+    margin-top: 3rem;
+  }
+  
+  /* Thay đổi màu chữ cho thông báo lỗi */
+  .form-text {
+    color: red;
+  }
+  
+  /* Thay đổi màu chữ cho liên kết "Forgot password" */
+  p a {
+    color: #007bff;
+  }
+  

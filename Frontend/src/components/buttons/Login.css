@@ -1,0 +1,88 @@
+.form-label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    padding: 8px;
+  }
+  
+  .form-text {
+    font-size: 12px;
+    color: #ffffff;
+  }
+  
+  .forgot-password {
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: right;
+  }
+  
+  .forgot-password a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .forgot-password a:hover {
+    text-decoration: underline;
+  }
+  .modal-title {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .btn-close {
+    color: #ffffff;
+  }
+  
+  .modal-content {
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-dialog {
+    margin-top: 100px;
+  }
+  
+  .modal {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-dialog .modal-content {
+    background-color: #ffffff;
+  }
+  
+  
+.text  {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.modal-title {
+    text-align: center;
+  }
+  .btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #0c00b6;
+    border-color: #007bff;
+  }
+  
+  .btn.btn-outline-primary .fa {
+    margin-right: 0.5em;
+  }
+  .text-lable{
+    color: black;
+  }
+  
+  
+  

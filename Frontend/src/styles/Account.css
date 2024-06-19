@@ -1,0 +1,465 @@
+.account-container {
+    display: flex;
+    min-height: calc(100vh - 100px); /* Đảm bảo chiều cao của trang bằng 100% màn hình trừ footer */
+    margin-bottom: 100px;
+  }
+  
+  .sidebar {
+    width: 201px;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  
+  .category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .category-item {
+    margin-bottom: 10px;
+  }
+  
+  .category-button {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-size: 16px;
+    padding: 8px 10px;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .category-button:hover {
+    background-color: #ccc;
+  }
+  
+  .category-button.active {
+    background-color: #666;
+    color: #fff;
+  }
+  
+  .subcategory-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+  }
+  
+  .subcategory-item {
+    margin-bottom: 5px;
+  }
+  
+  .subcategory-button {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: #666;
+    font-size: 14px;
+    padding: 5px 10px;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .subcategory-button:hover {
+    background-color: #363333;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .account-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #000000 !important; /* Màu chữ đen */
+    font-family: Arial, sans-serif; /* Kiểu chữ Arial */
+  }
+  
+  .account-info h2 {
+    margin-bottom: 10px;
+  }
+  
+  .account-info p {
+    margin-bottom: 5px;
+  }
+  .account-data{
+    color: #000000;
+  }
+  .order-history {
+    margin-top: 20px;
+  }
+  
+  .order-history h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .order-history table {
+    border: 1px solid #252525;
+    width: 100%;
+    border-collapse: collapse;
+    margin-left: 50px;
+  }
+  
+  .order-history th,
+  .order-history td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .order-history th {
+    background-color: #e1a84d;
+  }
+  
+  .order-history .order-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .order-history button {
+    padding: 6px 12px;
+    background-color: #7f38c6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .order-history button:hover {
+    background-color: #0b1b82;
+  }
+  .order-history tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .order-history tr:nth-child(odd) {
+    background-color: #aadfeb;
+  }
+  .order-details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .order-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .order-details-header h3 {
+    margin: 0;
+  }
+  
+  .order-details-header button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+  }
+  
+  th {
+    background-color: #7fb3c8;
+  }
+  
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .order-details-header button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #888;
+  }
+  
+  .order-details-header button:hover {
+    color: #000;
+  }
+ /* CSS cho bảng danh sách sản phẩm trong giỏ hàng */
+  
+  .cart-items {
+    margin-top: 20px;
+    border: 1px solid #000000;
+  }
+  
+  .cart-items h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .cart-items table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .cart-items th,
+  .cart-items td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+  }
+  
+  .cart-items th {
+    font-weight: bold;
+  }
+  
+  .cart-items tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .cart-items p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .cart-items .empty-cart-message {
+    font-style: italic;
+    color: #888;
+  }
+  
+  .cart-items th,
+.cart-items td {
+  border: 1px solid #ddd;
+}
+  
+.change-password-form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.change-password-form h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.account-info {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.account-data {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px;
+}
+
+.account-data-row {
+  display: flex;
+}
+
+.account-data-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.account-data-value {
+  flex: 1;
+}
+.comment-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comment-table th,
+.comment-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.comment-table th {
+  background-color: #f2f2f2;
+}
+
+.comment-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.comment-table tbody tr:hover {
+  background-color: #e6e6e6;
+}
+
+.comment-table td:first-child {
+  width: 60px;
+}
+
+.comment-table td:last-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+/* .update-infor {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.update-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-update{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-update {
+  width: 400px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  
+}
+
+.form-update h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-update .form-group {
+  margin-bottom: 20px;
+}
+
+.form-update label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-update input[type="text"],
+.form-update select,
+.form-update input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-update input[type="text"]:hover,
+.form-update select:hover,
+.form-update input[type="date"]:hover {
+  border-color: #e3d4d4;
+}
+
+.form-update .form-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-update button[type="submit"],
+.form-update button[type="button"] {
+  padding: 10px 20px;
+  background-color: #1b7999;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 150px;
+}
+
+.form-update button[type="submit"]:hover,
+.form-update button[type="button"]:hover {
+  background-color: #3c14bf;
+}
+
+.form-update button[type="button"] {
+  background-color: #1b7999;
+}
+
+.form-update button[type="button"]:hover {
+  background-color: 3c14bf;
+}
+
+
