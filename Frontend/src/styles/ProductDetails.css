@@ -1,0 +1,91 @@
+.container {
+    margin-top: 20px;
+  }
+  
+  .product {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .product img {
+    height: 400px;
+  }
+  
+  .display-5 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .lead {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+  
+  .author-label {
+    color: black;
+    font-size: 20px;
+   
+    font-weight: bold;
+    
+  }
+ 
+  
+  .form-control {
+    margin-top: 10px;
+  }
+  
+  .btn-outline-thirt {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #007bff;
+    color: #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-outline-thirt:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  .row-container {
+    border: 2px solid #000;
+    border-radius: 4px;
+    padding: 20px;
+  }
+  .form-label {
+    font-weight: bold;
+  }
+  .comment {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #010101;
+    border-radius: 15px;
+  }
+  
+  .comment .comment-author {
+    font-weight: bold;
+    color: #070505;
+  }
+  
+  .comment .comment-content {
+    margin-top: 10px;
+    color: #333;
+  }
+  .comment .comment-createdate {
+    margin-top: 10px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+  }
+  
+  

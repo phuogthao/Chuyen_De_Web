@@ -1,0 +1,35 @@
+.footer {
+    background-color: rgb(198, 241, 239);
+    color: #000000;
+    padding: 40px 0;
+  }
+  
+  .footer h5 {
+    text-transform: uppercase;
+    color: #000000;
+  }
+  
+  .footer .about-us {
+    margin-bottom: 20px;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer .text-center {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+    color: #000000;
+  }
+  
